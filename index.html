@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Play 2048 - A fun and addictive puzzle game. Swipe to move tiles and reach 2048!">
+  <meta name="keywords" content="2048, puzzle game, brain game, tile game">
+  <title data-i18n="title">2048 Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header with title, scores, and controls -->
+    <div class="header">
+      <div class="title-row">
+        <h1 data-i18n="title">2048 Game</h1>
+        <div class="lang-toggle">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ko">한국어</button>
+        </div>
+      </div>
+      
+      <div class="score-row">
+        <div class="scores">
+          <div class="score-container">
+            <div class="score-label" data-i18n="score">Score</div>
+            <div class="score-value" id="current-score">0</div>
+          </div>
+          <div class="score-container">
+            <div class="score-label" data-i18n="best">Best</div>
+            <div class="score-value" id="best-score">0</div>
+          </div>
+        </div>
+        <button id="new-game-btn" data-i18n="newGame">New Game</button>
+      </div>
+      
+      <div class="instructions" data-i18n="instructions">
+        Swipe or use arrow keys to move tiles. Merge tiles to reach 2048!
+      </div>
+    </div>
+    
+    <!-- Game Board Container -->
+    <div class="game-container" id="game-container">
+      <div id="game-board"></div>
+      
+      <!-- Game Over Overlay -->
+      <div class="overlay" id="game-over-overlay">
+        <h2 data-i18n="gameOver">Game Over!</h2>
+        <button id="try-again-btn" data-i18n="tryAgain">Try Again</button>
+      </div>
+      
+      <!-- Win Overlay -->
+      <div class="overlay" id="win-overlay">
+        <h2 data-i18n="youWin">You Win!</h2>
+        <button id="continue-btn" data-i18n="continue">Continue</button>
+      </div>
+    </div>
+    
+    <!-- Ad Placeholder Section (Below Game Board) -->
+    <!-- This is the primary ad slot positioned below the game -->
+    <!-- You can add Google AdSense or other ad network code here later -->
+    <div class="ad-section">
+      <div id="ad-slot">
+        <!-- Ad placeholder: Insert ad code here -->
+        <span data-i18n="adPlaceholder">Advertisement Space</span>
+      </div>
+    </div>
+    
+    <!-- 
+      Future Ad Expansion Options (commented out):
+      
+      1. Top Banner Ad (above game):
+      <div class="ad-section ad-section-top">
+        <div id="ad-slot-top">
+          Ad code here
+        </div>
+      </div>
+      
+      2. Sidebar Ad (desktop only):
+      <div class="ad-section ad-section-sidebar">
+        <div id="ad-slot-sidebar">
+          Ad code here
+        </div>
+      </div>
+      
+      Note: Uncomment and style as needed.
+      Remember to update CSS for proper positioning and responsive behavior.
+    -->
+  </div>
+  
+  <!-- Scripts -->
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
